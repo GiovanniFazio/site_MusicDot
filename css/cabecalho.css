@@ -1,0 +1,72 @@
+.cabecalho{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 0.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.23em;
+    color: white;
+}
+
+.cabecalho__logo{
+    padding: 1.5em 0;
+    width: 14.5em;
+}
+
+.cabecalho__menu{
+    display: flex; /*para manipular os elementos filhos com propriedades novas*/
+    justify-content: space-evenly; /*ajustar horizontalmente os elementos,com espaçamento igual em ambos os lados*/
+    flex-wrap: wrap; /*quebra de linhas com elementos,e recebem uma quebra de linha caso nao cabem no espaço.*/
+    background-color: #272b3a87;
+}
+
+.cabecalho__item--menu{
+    display: inline-block;
+}
+
+.cabecalho__item--menu a{
+    display: inline-block;
+    padding: 1.86em 1.42em;
+}
+
+/*Para mobile*/
+
+@media (min-width: 640px) {
+    .cabecalho{
+        padding-top: 0;
+        padding-bottom: 0;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+    }
+
+    .cabecalho__logo{
+        padding: 2.5em 0;
+    }
+
+    .cabecalho__menu{
+        background-color: transparent;
+    }
+}
+
+@media (min-width: 770px){
+    .cabecalho__item--menu--matricular{
+        margin-left: 1.42em;
+        border-radius: 6px; /*para fazer as bordas do botao*/
+        background-color: #e93d50;
+    }
+    .cabecalho__item--menu--matricular a{
+        padding: 1.8em 3.5em; /*tamanho do botao*/
+    }
+}
+/*
+@media (min-width: 1066px) {
+    .cabecalho{
+        padding-left: calc((100% - 960px) / 2);
+        padding-right: calc((100% - 960px) / 2);
+    }
+}
+*/ 
